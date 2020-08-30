@@ -34,6 +34,7 @@ export const AnimationContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 
   animation: ${appearFromRight} 1s;
 
