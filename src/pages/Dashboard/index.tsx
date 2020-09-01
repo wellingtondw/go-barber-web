@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiPower, FiUser, FiClock } from 'react-icons/fi';
 import logoImg from '../../assets/logo.svg';
 
@@ -12,10 +12,14 @@ import {
   Content,
   Schedule,
   NextAppointment,
+  Section,
+  Appointment,
   Calendar,
 } from './styles';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -68,7 +72,64 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars3.githubusercontent.com/u/31135545?s=460&u=49990907a4746b348df6b752fd5067a23f9a3375&v=4"
+                  alt="wellington"
+                />
+
+                <strong>Wellington Lima</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars3.githubusercontent.com/u/31135545?s=460&u=49990907a4746b348df6b752fd5067a23f9a3375&v=4"
+                  alt="wellington"
+                />
+
+                <strong>Wellington Lima</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars3.githubusercontent.com/u/31135545?s=460&u=49990907a4746b348df6b752fd5067a23f9a3375&v=4"
+                  alt="wellington"
+                />
+
+                <strong>Wellington Lima</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
+
         <Calendar />
       </Content>
     </Container>
