@@ -85,6 +85,10 @@ export const Schedule = styled.div`
     align-items: center;
     font-weight: 500;
 
+    span:last-child {
+      text-transform: capitalize;
+    }
+
     span + span:before {
       content: '';
       width: 1px;
